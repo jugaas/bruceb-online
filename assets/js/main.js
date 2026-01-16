@@ -61,8 +61,8 @@ if(form){
     document.body.classList.remove('modal-open');
     bd.style.display='none'; bd.remove();
   }
-  bd.querySelector('#age-yes').addEventListener('click', closegate);
-  bd.querySelector('#age-no').addEventListener('click', closegate);
+  bd.querySelector('#age-yes').addEventListener('click', closeGate);
+  bd.querySelector('#age-no').addEventListener('click', closeGate);
 })();
  
 (function(){
