@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="./assets/img/velocityx-logo.svg">
+<title>Bruce Games — Mini-Games, Events & Arcade Fun</title>
+
+<meta name="description" content="Bruce Games: mini-game calendar, ticket purchases, and fun-filled gaming experiences.">
+<meta property="og:title" content="Bruce Games — Mini-Games & Arcade Fun">
+<meta property="og:description" content="Check the mini-game calendar, results, and activities at Bruce Games.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="./assets/img/velocityx-logo.svg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bruce Games — Mini-Games & Arcade Fun">
+<meta name="twitter:description" content="Discover events, programs, and activities at Bruce Games—playful mini-games for everyone.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<!-- ================= MOBILE NAV CSS ================= -->
+<style>
+.nav-toggle{
+  display:none;
+  background:none;
+  border:none;
+  font-size:26px;
+  cursor:pointer;
+}
+
+/* Desktop */
+.menu{
+  display:flex;
+  gap:18px;
+}
+
+/* Mobile */
+@media (max-width: 900px){
+
+  .nav-toggle{
+    display:block;
+    color:#fff;
+  }
+
+  .right{
+    display:none;
+  }
+
+  .menu{
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #0d1b2a;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px;
+    display: none;
+    z-index: 9999;
+  }
+
+  .menu a{
+    color:#fff;
+    font-size:16px;
+  }
+
+  /* ACTIVE STATE */
+  .menu.show{
+    display:flex;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+
+    <a class="logo" href="index.html">
+      <span>Bruce Games</span>
+    </a>
+
+    <!-- Toggle Button -->
+    <button class="nav-toggle" id="navToggle">☰</button>
+
+    <!-- Menu -->
+    <div class="menu" id="navMenu">
+      <a href="index.html" style="opacity:1;font-weight:800">Home</a>
+      <a href="game.html">Mini-Games</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="about.html">The Arcade</a>
+      <a href="blog.html">Gaming News</a>
+      <a href="faq.html">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+
+    <div class="right">
+      <a class="btn" href="game.html">Play Now</a>
+    </div>
+
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container grid">
+    <div>
+      <div class="badge">Mini-Games • Competitive • Fun</div>
+      <h1>Bruce Games — Mini-Games & Arcade Fun</h1>
+      <p>
+        Bruce Games organizes mini-games, events, and fun activities for
+        gamers of all ages. Check schedules, buy tickets, and enjoy the experience.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="game.html">Games Calendar</a>
+        <a class="btn ghost" href="blog.html" style="color: #000;">Gaming News</a>
+      </div>
+      <div class="kudos">
+        <span class="pill">🕹️ Bruce</span>
+        <span class="pill">🎮 Mini-Games</span>
+        <span class="pill">🎟️ Events</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="grid-2">
+        <div class="card">
+          <div class="stat">
+            <div class="n" >History</div>
+            <div class="t" style="color: #fff;">Arcade</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="stat">
+            <div class="n">Pro</div>
+            <div class="t" style="color: #fff;">Gaming Skills</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section container">
+  <h2>Why Bruce Games Stands Out</h2>
+  <p style="max-width:720px;margin:0 auto 32px;opacity:0.8">
+    Bruce Games blends community, competition, and creativity, encouraging confidence and
+    skill-building through mini-games and arcade activities.
+  </p>
+
+  <div class="grid-2" style="margin-bottom:48px">
+    <div class="card" style="color: #fff;">
+      <h3>🎮 Mini-Game Sessions</h3>
+      <p>Weekly mini-game sessions for multiple skill levels.</p>
+    </div>
+
+    <div class="card" style="color: #fff;">
+      <h3>🎪 Gaming Events</h3>
+      <p>Activities and meetups designed for all gamers.</p>
+    </div>
+
+    <div class="card" style="color: #fff;">
+      <h3>🛝 Game Workshops</h3>
+      <p>Practical workshops and interactive stations.</p>
+    </div>
+
+    <div class="card" style="color: #fff;">
+      <h3>🎟️ VIP Experiences</h3>
+      <p>Special packages for teams and private events.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section container">
+  <div class="card">
+    <h2 style="color: #fff; text-align: center;">Plan Your Visit</h2>
+
+    <form id="contact-form" style="max-width:720px;margin:24px auto 0;text-align:left">
+      <div class="form-row">
+        <div>
+          <label style="color: #fff;">Name</label>
+          <input name="name" required placeholder="Your Name">
+        </div>
+        <div>
+          <label style="color: #fff;">Email</label>
+          <input name="email" required type="email" placeholder="your.email@example.com">
+        </div>
+      </div>
+
+      <div style="height:12px"></div>
+
+      <div>
+        <label style="color: #fff;">Message</label>
+        <textarea name="message" rows="4"></textarea>
+      </div>
+
+      <div style="height:18px"></div>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <div>© 2026 Bruce Games. All rights reserved.</div>
+    <div>
+      <span class="badge">Gaming • Safe • Fun</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+
+<!-- ============ MOBILE NAV SCRIPT ============ -->
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const mobileToggleBtn = document.getElementById("navToggle");
+  const mobileMenuBox  = document.getElementById("navMenu");
+
+  if(!mobileToggleBtn || !mobileMenuBox) return;
+
+  mobileToggleBtn.addEventListener("click", function(){
+    mobileMenuBox.classList.toggle("show");
+  });
+
+  // auto-close after click
+  mobileMenuBox.querySelectorAll("a").forEach(link=>{
+    link.addEventListener("click", ()=>{
+      mobileMenuBox.classList.remove("show");
+    });
+  });
+
+});
+</script>
+
+</body>
+</html>
