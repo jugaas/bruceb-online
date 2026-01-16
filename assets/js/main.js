@@ -48,6 +48,7 @@ if(form){
 <div class="modal">
 <h3>Policy Notice</h3>
 <p>Are you accepting our policy to enter the game?</p>
+<p>Welcome to Brucebt</p>
 <div style="display:flex;gap:10px;flex-wrap:wrap">
 <button class="btn" id="age-yes">Yes, Accept</button>
 <button class="btn ghost" id="age-no">Close</button>
